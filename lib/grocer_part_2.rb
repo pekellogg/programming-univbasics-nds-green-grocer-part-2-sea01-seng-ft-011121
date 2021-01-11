@@ -9,6 +9,7 @@ def apply_coupons(cart, coupons)
       cart_item[:count] = cart_item[:count] - coupon_item[:num]
       if  cart_item[:count] > 0
         remainder_it
+      end
 end
 
 def apply_clearance(cart)
