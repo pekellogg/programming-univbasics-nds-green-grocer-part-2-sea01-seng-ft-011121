@@ -9,11 +9,6 @@ def apply_coupons(cart, coupons)
       cart_item[:count] = cart_item[:count] - coupon_item[:num]
       if  cart_item[:count] > 0
         remainder_it
-      end
-    end
-  end
-end
-
 def apply_clearance(cart)
   cart.map do |cart_item|
     if cart_item[:clearance]
@@ -23,7 +18,6 @@ def apply_clearance(cart)
   end
   cart
 end
-
 def checkout(cart, coupons)
   new_cart = consolidate_cart(cart)
   couped_cart = apply_coupons(new_cart, coupons)
